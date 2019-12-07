@@ -32,7 +32,6 @@ const calculateTotalPrice = ({name, price, quantity}= products, productName) => 
   };
 
 
-
   console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
   console.log(calculateTotalPrice(products, 'Дроид')); // 2800
