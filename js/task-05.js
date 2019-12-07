@@ -5,17 +5,20 @@ const products = [
     { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function (products, key) {
+const getAllPropValues = function (products, prop) {
 
-    const values =[];
+    const newArray =[];
 
-    for (const product of products) {
-        if (key in product) {
-            values.push(product[key]);
+    for (const item of products) {
+        if (prop in item) {
+            newArray.push(item[prop]);
         }
     }
-return values;
+     return newArray;
 };
+
+
+
 
 console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
