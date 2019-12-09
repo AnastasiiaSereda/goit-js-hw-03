@@ -19,20 +19,19 @@ const products = [{
         quantity: 2
     },
 ];
- 
 
-const calculateTotalPrice = ({name, price, quantity}= products, productName) => {
 
- for (let i = 0; i < products.length; i++) {
-     if (name === productName) {
-         return price * quantity;
-      }
+const calculateTotalPrice = (arr, productName) => {
+    let res;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].name === productName) {
+            res = arr[i].price * arr[i].quantity;
+        }
     }
+    return res
+};
 
-  };
 
+console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
-  console.log(calculateTotalPrice(products, 'Радар')); // 5200
-
-  console.log(calculateTotalPrice(products, 'Дроид')); // 2800
-
+console.log(calculateTotalPrice(products, 'Дроид')); // 2800
