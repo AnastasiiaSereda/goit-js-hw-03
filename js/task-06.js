@@ -21,14 +21,14 @@ const products = [{
 ];
 
 
-const calculateTotalPrice = (arr, productName) => {
-    let res;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].name === productName) {
-            res = arr[i].price * arr[i].quantity;
+const calculateTotalPrice = ( products, productName) => {
+    let totalPrice;
+    for (let i = 0; i <  products.length; i++) {
+        if ( products[i].name === productName) {
+            totalPrice =  products[i].price *  products[i].quantity;
         }
     }
-    return res
+    return totalPrice;
 };
 
 
